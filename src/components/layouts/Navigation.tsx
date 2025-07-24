@@ -12,6 +12,8 @@ const NAME_BRAND = 'hola@fjr.fthrrhmn25.com';
 // TODO : add animation for brand
 export function Navigation() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  // handle mobile open
   const handleMobileOpen = useCallback(() => setIsMobileOpen(prev => !prev), []);
 
   return (
@@ -20,7 +22,7 @@ export function Navigation() {
         <div className="flex items-center gap-2.5">
           <RiVercelFill size={20} />
           <Link href="mailto:hola@fjr.fthrrhmn25.com" target="_blank" rel="noopener noreferrer">
-            <small className="hidden sm:block underline underline-offset-2 text-base lg:text-lg">{NAME_BRAND}</small>
+            <small className="hidden sm:block underline underline-offset-4 text-base lg:text-lg">{NAME_BRAND}</small>
           </Link>
         </div>
 
@@ -30,12 +32,12 @@ export function Navigation() {
             {navItems.map(item => (
               <motion.div
                 key={item.label}
-                className="text-sm"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
+                className="text-sm py-2"
+                whileHover={{ y: 1, scale: 0.95 }}
+                whileTap={{ scale: 1.1 }}
                 transition={{
                   type: 'spring',
-                  stiffness: 260,
+                  stiffness: 320,
                   damping: 10,
                 }}
               >
@@ -53,7 +55,7 @@ export function Navigation() {
                 whileTap={{ scale: 0.95 }}
                 transition={{
                   type: 'spring',
-                  stiffness: 260,
+                  stiffness: 320,
                   damping: 10,
                 }}
               >
@@ -74,7 +76,7 @@ export function Navigation() {
                 whileTap={{ scale: 0.95 }}
                 transition={{
                   type: 'spring',
-                  stiffness: 260,
+                  stiffness: 320,
                   damping: 10,
                 }}
               >
@@ -93,7 +95,7 @@ export function Navigation() {
                 whileTap={{ scale: 0.95 }}
                 transition={{
                   type: 'spring',
-                  stiffness: 260,
+                  stiffness: 320,
                   damping: 10,
                 }}
               >

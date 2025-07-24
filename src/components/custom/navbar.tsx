@@ -1,6 +1,5 @@
 'use client';
 import { BsListNested } from 'react-icons/bs';
-import { useCallback, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { motion } from 'framer-motion';
 
@@ -18,7 +17,7 @@ export const NavBar = ({ children }: { children: React.ReactNode }) => {
 
 export const NavList = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (
-    <div className={`hidden lg:flex h-10 max-h-10 bg-zinc-800/50 backdrop-blur border-white/5 border shadow-md items-center gap-4 rounded-xl px-5 py-2 ${className}`}>
+    <div className={`hidden lg:flex h-10 max-h-10 bg-zinc-800/50 backdrop-blur border-white/5 border shadow-xl items-center gap-4 rounded-xl px-5 py-2 ${className}`}>
       {children}
     </div>
   );
@@ -62,7 +61,7 @@ export const NavMobile = ({ isOpen, onHandle, children }: NavMobileProps) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-10 right-0 z-50 w-36 max-w-xs p-4 border border-white/5 bg-zinc-800 rounded-xl shadow-md"
+              className="absolute top-10 right-0 z-50 w-36 max-w-xs p-4 border border-white/5 bg-zinc-800 rounded-xl shadow-xl"
             >
               {children}
             </motion.div>
