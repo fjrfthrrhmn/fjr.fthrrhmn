@@ -21,9 +21,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
-      "@/hooks/*": ["./src/common/hooks/*"],
-      "@/utils/*": ["./src/common/utils/*"],
-      "@/store/*": ["./src/common/store/*"],
+      "@/reactbits/*": ["./src/components/reactbits/*"],
+      "@/magicui/*": ["./src/components/magicui/*"],
+      "@/common/*": ["./src/common/*"],
       "@/types/*": ["./src/types/*"]
     }
   },

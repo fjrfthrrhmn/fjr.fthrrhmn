@@ -30,6 +30,7 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
   [key: string]: unknown;
 }
 
+
 /**
  * DotPattern Component
  *
@@ -123,14 +124,14 @@ export function DotPattern({
           <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
         </radialGradient>
       </defs>
-      {dots.map((dot, index) => (
+      {dots.map((dot) => (
         <motion.circle
           key={`${dot.x}-${dot.y}`}
           cx={dot.x}
           cy={dot.y}
           r={cr}
           fill={glow ? `url(#${id}-gradient)` : "currentColor"}
-          className="text-zinc-400/50"
+          className="text-zinc-500/50"
           initial={glow ? { opacity: 0.4, scale: 1 } : {}}
           animate={
             glow
