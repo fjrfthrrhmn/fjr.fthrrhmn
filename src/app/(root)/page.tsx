@@ -1,7 +1,12 @@
-import { Intro } from './_components/Intro';
+import { Intro, Service } from "./_components";
 
 export default function Home() {
-  return <Intro />;
+  return (
+    <>
+      <Intro />
+      <Service />
+    </>
+  );
   // Intro
   // Services
   // Quote

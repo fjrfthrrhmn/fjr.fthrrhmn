@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 export function Intro() {
   return (
-    <>
+    <section className="relative min-h-[calc(100dvh-72px)]">
       <Main className="flex flex-col justify-center gap-4">
         <ButtonShiny
           text="Introduction"
@@ -64,6 +64,6 @@ export function Intro() {
 
       {/* Overlay */}
       <DotBackground position="top-right" />
-    </>
+    </section>
   );
 }
