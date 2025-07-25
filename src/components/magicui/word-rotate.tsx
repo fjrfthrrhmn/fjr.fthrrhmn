@@ -4,6 +4,7 @@ import { AnimatePresence, motion, MotionProps } from "motion/react";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
+import Typography from "../custom/typography";
 
 interface WordRotateProps {
   words: string[];
@@ -37,13 +38,15 @@ export function WordRotate({
   return (
     <div className="overflow-hidden py-2">
       <AnimatePresence mode="wait">
-        <motion.h1
+        <motion.div
           key={words[index]}
           className={cn(className)}
           {...motionProps}
         >
-          {words[index]}
-        </motion.h1>
+          <Typography.Title variant="2/semibold">
+            {words[index]}
+          </Typography.Title>
+        </motion.div>
       </AnimatePresence>
     </div>
   );

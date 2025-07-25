@@ -15,7 +15,7 @@ export const ButtonShiny = ({ className, text, icon }: ButtonProps) => {
         className
       )}
     >
-      <ShinyText text={text} icon={icon} className={`${icon ? 'flex items-center gap-2' : ''}`} />
+      <ShinyText text={text} icon={icon} />
     </div>
   );
 };

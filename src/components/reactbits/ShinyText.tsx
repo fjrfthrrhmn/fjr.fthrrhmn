@@ -3,6 +3,7 @@
 */
 
 import React from 'react';
+import Typography from '../custom/typography';
 
 interface ShinyTextProps {
   text: string;
@@ -17,7 +18,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 5
 
   return (
     <div
-      className={`text-[#b5b5b5a4] bg-clip-text ${disabled ? '' : 'animate-shine'} ${className}`}
+      className={`text-[#b5b5b5a4] bg-clip-text ${disabled ? '' : 'animate-shine'} ${className} ${icon ? 'flex items-center gap-2' : ''}`}
       style={{
         backgroundImage: 'linear-gradient(120deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 90%)',
         backgroundSize: '200% 100%',
@@ -25,7 +26,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 5
         animationDuration: animationDuration,
       }}
     >
-      {icon}
+      {icon && <span>{icon}</span>}
       {text}
     </div>
   );

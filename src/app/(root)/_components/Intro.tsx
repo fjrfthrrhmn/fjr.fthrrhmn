@@ -6,27 +6,26 @@ import { WordRotate } from '@/components/magicui/word-rotate';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon, DownloadIcon, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Typography from '@/components/custom/typography';
 
 export function Intro() {
   return (
-    <section className="relative min-h-[calc(100dvh-72px)]">
-      <Main className="flex flex-col justify-center gap-4">
+    <Main container={false} padding={false}>
+      <Main padding={false} className="flex flex-col justify-center gap-4">
         <ButtonShiny
           text="Introduction"
           icon={<Sparkles size={20} className="text-amber-500/90 text-shadow-amber-500 text-shadow-2xs" />}
         />
-
         <div>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 text-3xl lg:text-5xl *:font-semibold">
-            <h1>Hi, I’m Fajar —</h1>
-            <WordRotate words={['Informatics Student', 'Software Developer', 'Web Designer']} />
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+            <Typography.Title variant="2/bold">Hi, I’m Fajar —</Typography.Title>
+            <WordRotate words={['Informatics Student', 'Software Developer', 'UI/UX Website']} />
           </div>
-          <p className="max-w-xl mt-2 text-muted-foreground">
+          <Typography.Text variant="sm/semibold">
             I build clean, fast, and modern websites with a strong focus on design and user experience. Always down to explore new tech and
             ship meaningful stuff. Currently deep into web dev, open source, and leveling up every day.
-          </p>
+          </Typography.Text>
         </div>
-
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <motion.div
             className="group"
@@ -60,10 +59,11 @@ export function Intro() {
             </Button>
           </motion.div>
         </div>
+
       </Main>
 
       {/* Overlay */}
       <DotBackground position="top-right" />
-    </section>
+    </Main>
   );
 }
