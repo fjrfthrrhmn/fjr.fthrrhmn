@@ -59,7 +59,7 @@ const TitleStyles = cva([], {
   },
 });
 
-const TextStyles = cva(['text-muted-foreground text-pretty leading-5 tracking-wide'], {
+const TextStyles = cva(['text-muted-foreground font-medium text-pretty leading-5 tracking-wide'], {
   variants: {
     size: {
       xl: 'text-xl',
@@ -77,8 +77,8 @@ const TextStyles = cva(['text-muted-foreground text-pretty leading-5 tracking-wi
   },
   defaultVariants: {
     size: 'sm',
-    weight: 'semibold'
-  }
+    weight: 'semibold',
+  },
 });
 
 Title.displayName = 'Title';

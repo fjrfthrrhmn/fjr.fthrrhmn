@@ -7,20 +7,20 @@ import { ArrowRight, TimerIcon } from 'lucide-react';
 
 export function Service() {
   return (
-    <Main padding={false} className="space-y-8">
+    <Main padding={false} height='h-max' className="space-y-8">
       <Title
         text="Services"
         icon={TimerIcon}
         desc="I work as a freelancer, helping brands, startups, and teams build high-quality websites with a strong focus on strategy, performance, and design."
       />
 
-      <div className="overflow-hidden relative bg-gradient-to-b from-zinc-800 to-zinc-900 p-6 rounded-xl shadow-lg space-y-6 outline-2 outline-offset-[6px] outline-solid outline-white/15">
+      <div className="group overflow-hidden relative bg-gradient-to-b from-zinc-800 to-zinc-900 p-6 rounded-xl shadow-lg space-y-6 outline-2 outline-offset-[6px] outline-solid outline-white/15">
         <div>
           <Typography.Title variant="4/bold">
-            Let&lsquo;s build something{" "}
-            <span className="font-bold decoration-2 decoration-wavy decoration-sky-500 underline underline-offset-4">awesome</span>
+            Let&lsquo;s Build Something{' '}
+            <span className="font-bold decoration-2 decoration-wavy decoration-sky-500 underline underline-offset-4">Awesome</span>
           </Typography.Title>
-          <Typography.Text variant="sm/semibold" className='max-w-xl'>
+          <Typography.Text className="max-w-xl">
             I’m open for freelance projects — feel free to reach out and let’s make something impactful together.
           </Typography.Text>
         </div>
@@ -31,8 +31,8 @@ export function Service() {
         </Button>
 
         {/* Image Bottom Right */}
-        <div className="absolute -bottom-40 -right-32 rotate-12 select-none pointer-events-none">
-          <span className="text-[400px] opacity-15">✨</span>
+        <div className="absolute -bottom-40 -right-32 group-hover:-right-28 duration-200 transition-all rotate-12 select-none pointer-events-none">
+          <span className="text-[400px] opacity-15 group-hover:opacity-30  duration-200 transition-all">✨</span>
         </div>
       </div>
     </Main>

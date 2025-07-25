@@ -21,7 +21,7 @@ export function Intro() {
             <Typography.Title variant="2/bold">Hi, I’m Fajar —</Typography.Title>
             <WordRotate words={['Informatics Student', 'Software Developer', 'UI/UX Website']} />
           </div>
-          <Typography.Text variant="sm/semibold">
+          <Typography.Text className='lg:max-w-2xl'>
             I build clean, fast, and modern websites with a strong focus on design and user experience. Always down to explore new tech and
             ship meaningful stuff. Currently deep into web dev, open source, and leveling up every day.
           </Typography.Text>
