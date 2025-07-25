@@ -10,6 +10,7 @@ type Contribution = {
   };
 };
 
+// TODO: Improve this code
 export const ContributionsGraph = ({ data }: { data: Contribution }) => {
   const start = moment().startOf('year');
   const today = moment();
