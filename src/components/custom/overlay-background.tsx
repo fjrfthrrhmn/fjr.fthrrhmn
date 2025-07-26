@@ -28,7 +28,7 @@ interface DotBackgroundProps {
 export const DotBackground = ({
   position = 'radial',
   opacity = 100, // Reduced default opacity
-  height = '85%',
+  height = '100%',
   size = 32, // Increased default size for fewer dots
 }: DotBackgroundProps) => {
   const maskClass = (() => {

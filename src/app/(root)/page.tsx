@@ -1,13 +1,11 @@
 import { Separator } from '@/components/ui/separator';
-import { Intro, Service, AboutSection } from './_components';
+import { HeroSection, AboutSection } from './_components';
 
 export default function Home() {
   return (
     <>
-      <Intro />
-      <Separator className="container mx-auto my-20" />
-      <Service />
-      <Separator className="container mx-auto my-20" />
+      <HeroSection />
+      <Separator />
       <AboutSection />
     </>
   );

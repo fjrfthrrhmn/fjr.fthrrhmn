@@ -1,3 +1,2 @@
-export { Service } from './Service';
-export { Intro } from './Intro';
+export { HeroSection } from './hero/HeroSection';
 export { AboutSection } from './about/AboutSection';

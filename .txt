@@ -1,0 +1,7 @@
+Improve navigation: 
+- Logo hidden if scroll down 
+- Add smooth transition for navigation
+
+Improve About Section:
+- Add animation for github contribution chart when viewing and loading get data
+- Add animation for icon interest
