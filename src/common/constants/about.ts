@@ -79,9 +79,35 @@ const interests = [
   },
 ];
 
+const skills = {
+  coreSkills: [
+    { name: 'HTML', icon: 'html' },
+    { name: 'CSS', icon: 'css' },
+    { name: 'JavaScript', icon: 'js' },
+    { name: 'Astro', icon: 'astro' },
+    { name: 'Tailwind CSS', icon: 'tailwind' },
+    { name: 'React.js', icon: 'react' },
+    { name: 'Firebase', icon: 'firebase' },
+    { name: 'Bootstrap', icon: 'bootstrap' },
+    { name: 'Laravel', icon: 'laravel' },
+    { name: 'TypeScript', icon: 'ts' },
+  ],
+  otherTools: [
+    { name: 'Figma', icon: 'figma' },
+    { name: 'Git', icon: 'git' },
+    { name: 'Github', icon: 'github' },
+    { name: 'Postman', icon: 'postman' },
+    { name: 'PowerShell', icon: 'powershell' },
+    { name: 'Discord', icon: 'discord' },
+    { name: 'Notion', icon: 'notion' },
+    { name: 'VSCode', icon: 'vscode' },
+  ],
+};
+
 export const dataAbout = {
   roles,
   profile,
   summary,
   interests,
+  skills,
 };

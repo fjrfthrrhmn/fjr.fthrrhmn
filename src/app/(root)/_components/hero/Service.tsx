@@ -13,7 +13,7 @@ export function Service() {
         desc="I work as a freelancer, helping brands, startups, and teams build high-quality websites with a strong focus on strategy, performance, and design."
       />
 
-      <div className="group overflow-hidden relative bg-gradient-to-b from-zinc-800 to-zinc-900 my-6 p-4 sm:p-6 rounded-xl shadow-lg outline-2 outline-offset-[6px] outline-solid outline-white/15">
+      <div className="group overflow-hidden relative bg-gradient-to-b from-zinc-800 to-zinc-900 p-4 sm:p-6 rounded-xl shadow-lg outline-2 outline-offset-[6px] outline-solid outline-white/15">
         <div className="relative z-10 flex flex-col gap-6">
           <div>
             <Typography.Title variant="4/bold">
