@@ -169,8 +169,19 @@
   /* animations */
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-
+  --animate-opacity: opacity var(--duration, 2s) linear infinite;
   --animate-shine: shine var(--duration, 5s) linear infinite;
+
+  @keyframes opacity {
+    0%, 100% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
 
   /* marquee component */
   @keyframes marquee {

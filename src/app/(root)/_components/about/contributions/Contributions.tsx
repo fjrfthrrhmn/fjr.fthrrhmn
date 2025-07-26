@@ -1,9 +1,9 @@
 'use client';
 import { Title } from '@/components/custom/title';
-import { Github } from 'lucide-react';
 import { useContributions } from '@/common/hooks/useGithub';
 import { ContributionsGraph } from './ContributionsGraph';
 import moment from 'moment';
+import { FaGithub } from 'react-icons/fa';
 
 const arrayToDateMap = (arr: Array<any>): Record<string, any> => {
   return arr.reduce((acc, item) => {
@@ -22,7 +22,7 @@ export const Contributions = () => {
 
   return (
     <div className="space-y-6">
-      <Title text="Contributions" icon={Github} desc={`Open source activity on GitHub — ${total} contributions in ${year}.`} />
+      <Title text="Contributions" icon={FaGithub} desc={`Open source activity on GitHub — ${total} contributions in ${year}.`} />
       <ContributionsGraph data={dataMap} />
     </div>
   );

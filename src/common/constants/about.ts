@@ -3,7 +3,7 @@ import { FaCode } from 'react-icons/fa6';
 import { MdOutlineDesignServices } from 'react-icons/md';
 import { PiStudent } from 'react-icons/pi';
 
-export const roles = [
+const roles = [
   {
     icon: PiStudent,
     label: 'Student',
@@ -21,15 +21,15 @@ export const roles = [
   },
 ];
 
-export const profile = {
+const profile = {
   name: 'Fajar Fathurrahman Ramdhani',
   email: 'fjr.fthrrhmn25@gmail.com',
   phone: '+62 812 3456 7890',
-  location: 'Bandung, Indonesia 🇮🇩',
+  location: 'Based in Bandung, Indonesia 🇮🇩',
   bio: 'Informatics student at Satu University',
 };
 
-export const summary = [
+const summary = [
   'Currently diving deep into Informatics at Satu University — mostly vibing with full-stack web dev, system design, and building things that actually scale.',
   "Outside of code? I'm into design, games, good books, and strong coffee. I believe in work-life balance and clean, maintainable code.",
 ];
@@ -110,4 +110,11 @@ export const dataAbout = {
   summary,
   interests,
   skills,
+};
+
+export const statusColors = {
+  online: 'bg-green-500',
+  idle: 'bg-yellow-500',
+  dnd: 'bg-red-500',
+  offline: 'bg-gray-500',
 };

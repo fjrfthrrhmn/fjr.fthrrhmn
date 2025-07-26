@@ -9,7 +9,7 @@ export const SkillsMarque = ({ data }: any) => {
         const slider = [...allSkills].sort(() => Math.random() - 0.5);
 
         return (
-          <Marquee key={i} reverse={i === 0} className="max-w-full [--duration:60s]">
+          <Marquee key={i} reverse={i === 0} className="max-w-full [--duration:40s]">
             {slider.map(skill => (
               <img key={skill.name} src={`https://skillicons.dev/icons?i=${skill.icon}`} alt={skill.name} title={skill.name} className="w-full h-10 sm:h-14 me-1" />
             ))}

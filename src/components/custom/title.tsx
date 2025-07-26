@@ -1,10 +1,11 @@
 import { LucideIcon, LucideProps } from 'lucide-react';
 import Typography from './typography';
 import React from 'react';
+import { IconType } from 'react-icons';
 
 interface TitleProps {
   text: string;
-  icon?: LucideIcon;
+  icon?: LucideIcon | IconType;
   children?: React.ReactNode;
   className?: string;
   classNameText?: string;
