@@ -1,4 +1,4 @@
-import { Code, School, Figma, Gamepad2, BookOpenText, Fish, Tv, Coffee } from 'lucide-react';
+import { Code, School, Figma, Gamepad2, BookOpenText, Fish, Tv, Coffee, Headset, Joystick } from 'lucide-react';
 import { FaCode } from 'react-icons/fa6';
 import { MdOutlineDesignServices } from 'react-icons/md';
 import { PiStudent } from 'react-icons/pi';
@@ -81,26 +81,26 @@ const interests = [
 
 const skills = {
   coreSkills: [
-    { name: 'HTML', icon: 'html' },
-    { name: 'CSS', icon: 'css' },
-    { name: 'JavaScript', icon: 'js' },
-    { name: 'Astro', icon: 'astro' },
-    { name: 'Tailwind CSS', icon: 'tailwind' },
-    { name: 'React.js', icon: 'react' },
-    { name: 'Firebase', icon: 'firebase' },
-    { name: 'Bootstrap', icon: 'bootstrap' },
-    { name: 'Laravel', icon: 'laravel' },
-    { name: 'TypeScript', icon: 'ts' },
+    { name: 'HTML', icon: 'https://skillicons.dev/icons?i=html' },
+    { name: 'CSS', icon: 'https://skillicons.dev/icons?i=css' },
+    { name: 'JavaScript', icon: 'https://skillicons.dev/icons?i=js' },
+    { name: 'Astro', icon: 'https://skillicons.dev/icons?i=astro' },
+    { name: 'Tailwind CSS', icon: 'https://skillicons.dev/icons?i=tailwind' },
+    { name: 'React.js', icon: 'https://skillicons.dev/icons?i=react' },
+    { name: 'Firebase', icon: 'https://skillicons.dev/icons?i=firebase' },
+    { name: 'Bootstrap', icon: 'https://skillicons.dev/icons?i=bootstrap' },
+    { name: 'Laravel', icon: 'https://skillicons.dev/icons?i=laravel' },
+    { name: 'TypeScript', icon: 'https://skillicons.dev/icons?i=ts' },
   ],
   otherTools: [
-    { name: 'Figma', icon: 'figma' },
-    { name: 'Git', icon: 'git' },
-    { name: 'Github', icon: 'github' },
-    { name: 'Postman', icon: 'postman' },
-    { name: 'PowerShell', icon: 'powershell' },
-    { name: 'Discord', icon: 'discord' },
-    { name: 'Notion', icon: 'notion' },
-    { name: 'VSCode', icon: 'vscode' },
+    { name: 'Figma', icon: 'https://skillicons.dev/icons?i=figma' },
+    { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
+    { name: 'Github', icon: 'https://skillicons.dev/icons?i=github' },
+    { name: 'Postman', icon: 'https://skillicons.dev/icons?i=postman' },
+    { name: 'PowerShell', icon: 'https://skillicons.dev/icons?i=powershell' },
+    { name: 'Discord', icon: 'https://skillicons.dev/icons?i=discord' },
+    { name: 'Notion', icon: 'https://skillicons.dev/icons?i=notion' },
+    { name: 'VSCode', icon: 'https://skillicons.dev/icons?i=vscode' },
   ],
 };
 
@@ -112,9 +112,25 @@ export const dataAbout = {
   skills,
 };
 
+// discord
 export const statusColors = {
   online: 'bg-green-500',
   idle: 'bg-yellow-500',
   dnd: 'bg-red-500',
   offline: 'bg-gray-500',
+};
+// Activity background configurations
+export const activityBackground = {
+  Roblox: ' bg-gradient-to-tr from-background to-blue-500/60',
+  Code: 'bg-gradient-to-tr from-background to-sky-500/60',
+  Spotify: 'bg-gradient-to-tr from-background to-emerald-500/60',
+  Others: 'bg-gradient-to-tr from-background to-zinc-500/60',
+};
+
+// Activity icon configurations
+export const activityIcons = {
+  Code: 'https://skillicons.dev/icons?i=vscode',
+  Spotify: 'https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png',
+  Roblox: 'https://i.pinimg.com/736x/d4/2a/6c/d42a6c5c6cd6eba516d0c8bda1f5a79e.jpg',
+  Others: 'https://skillicons.dev/icons?i=discord',
 };

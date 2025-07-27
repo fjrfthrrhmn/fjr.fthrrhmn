@@ -7,7 +7,7 @@ export const getLayard = async (): Promise<LanyardResponse> => {
 };
 
 // TYPES
-interface LanyardResponse {
+export interface LanyardResponse {
   success: boolean;
   data: LanyardUserData;
 }
@@ -33,7 +33,7 @@ interface DiscordUser {
   public_flags?: number;
 }
 
-interface Activity {
+export interface Activity {
   type: number;
   name: string;
   details?: string;
@@ -53,6 +53,7 @@ interface Activity {
     small_image?: string;
     small_text?: string;
   };
+  application_id?: string;
   flags?: number;
   id?: string;
 }

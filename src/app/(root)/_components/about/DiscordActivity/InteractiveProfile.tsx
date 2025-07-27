@@ -1,11 +1,11 @@
 'use client';
-
 import { useLanyardActivity } from '@/common/hooks/useLayard';
 import { statusColors } from '@/common/constants/about';
 import { useCallback, useState } from 'react';
-import { ActivityModal } from './DiscordActivity';
+import Image from 'next/image';
+import { ActivityModal } from './ActivityModal';
 
-export function InteractiveProfile() {
+export const InteractiveProfile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { data } = useLanyardActivity();
 
@@ -35,8 +35,7 @@ export function InteractiveProfile() {
         />
       </div>
 
-      {/* Modal is here... */}
       <ActivityModal isOpen={isOpen} onClose={() => handleOpen()} />
     </>
   );
-}
+};

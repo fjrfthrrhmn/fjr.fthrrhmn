@@ -23,6 +23,7 @@ interface DotBackgroundProps {
   opacity?: number;
   height?: string; // e.g. "80%", "600px"
   size?: number; // spacing of dots (px)
+  className?: string
 }
 
 export const DotBackground = ({
@@ -30,6 +31,7 @@ export const DotBackground = ({
   opacity = 100, // Reduced default opacity
   height = '100%',
   size = 32, // Increased default size for fewer dots
+  className
 }: DotBackgroundProps) => {
   const maskClass = (() => {
     switch (position) {
@@ -59,12 +61,13 @@ export const DotBackground = ({
         className={cn(
           'absolute inset-0 -z-50',
           '[background-image:radial-gradient(#d4d4d4_20px,transparent_20px)]', // Smaller dot size
-          'dark:[background-image:radial-gradient(#404040_0.8px,transparent_0.8px)]'
+          'dark:[background-image:radial-gradient(#404040_0.8px,transparent_0.8px)]',
+          className
         )}
       />
 
       {/* Masking Layer with smoother transitions */}
-      <div style={{ height }} className={cn('absolute top-0 inset-x-0 -z-50 pointer-events-none bg-background', maskClass)} />
+      <div style={{ height }} className={cn('absolute top-0 inset-x-0 -z-50 pointer-events-none bg-background rounded-2xl', maskClass)} />
     </>
   );
 };

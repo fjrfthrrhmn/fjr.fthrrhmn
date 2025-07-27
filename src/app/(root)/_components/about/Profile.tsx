@@ -1,9 +1,10 @@
 import { dataAbout } from '@/common/constants/about';
 import Typography from '@/components/custom/typography';
 import { cn } from '@/lib/utils';
-import { InteractiveProfile } from './InteractiveProfile';
 import { MdVerified as VerifiedIcon } from "react-icons/md";
-export function Profile() {
+import { InteractiveProfile } from './DiscordActivity/InteractiveProfile';
+
+export const Profile = () => {
   return (
     <div className="space-y-4">
       <div className="flex  items-center gap-4">

@@ -4,10 +4,11 @@ import { Title } from '@/components/custom/title';
 import { SkillsMarque } from './SkillsMarque';
 import { useState } from 'react';
 import { Zap } from 'lucide-react';
+import { SkillsGrid } from './SkillsGrid';
 
-export function Skills() {
-  const [view, setView] = useState<('marquee' | 'list')>('marquee');
-  const skills = dataAbout.skills;
+export const Skills = () => {
+  const [view, setView] = useState<'marquee' | 'list'>('marquee');
+  const skills = dataAbout?.skills;
 
   return (
     <main>
@@ -21,7 +22,7 @@ export function Skills() {
         </button>
       </Title>
 
-      <SkillsMarque data={skills} />
+      {view === 'marquee' ? <SkillsMarque data={skills} /> : <SkillsGrid data={skills} />}
     </main>
   );
-}
+};

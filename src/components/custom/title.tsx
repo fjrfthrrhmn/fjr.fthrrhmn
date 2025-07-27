@@ -1,3 +1,4 @@
+'use client'
 import { LucideIcon, LucideProps } from 'lucide-react';
 import Typography from './typography';
 import React from 'react';

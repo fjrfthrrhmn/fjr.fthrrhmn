@@ -3,7 +3,7 @@ import { Contributions } from './contributions/Contributions';
 import { Profile } from './Profile';
 import { Skills } from './skills/Skills';
 
-export function AboutSection() {
+export const AboutSection = () => {
   return (
     <Main.Container paddingY="py-32" className="space-y-12">
       <Profile />
