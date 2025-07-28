@@ -1,13 +1,15 @@
 import { dataAbout } from '@/common/constants/about';
 import Typography from '@/components/custom/typography';
 import { cn } from '@/lib/utils';
-import { MdVerified as VerifiedIcon } from "react-icons/md";
+import { MdVerified as VerifiedIcon } from 'react-icons/md';
 import { InteractiveProfile } from './DiscordActivity/InteractiveProfile';
+import { Button } from '@/components/ui/button';
+import { Briefcase, FileTextIcon } from 'lucide-react';
 
 export const Profile = () => {
   return (
     <div className="space-y-4">
-      <div className="flex  items-center gap-4">
+      <div className="flex flex-col sm:items-center gap-4">
         {/* Avatar is here... */}
         <InteractiveProfile />
 
@@ -27,8 +29,8 @@ export const Profile = () => {
 
           {/* Profile Header */}
           <div className="flex items-center gap-2">
-            <Typography.Title variant="5/bold">{dataAbout.profile.name}</Typography.Title>
-            <VerifiedIcon className='text-blue-400' />
+            <Typography.Title variant="5/bold" title={dataAbout.profile.name} className='line-clamp-1'>{dataAbout.profile.name}</Typography.Title>
+            <VerifiedIcon className="text-blue-400" />
           </div>
 
           {/* Profile Info */}
@@ -52,21 +54,36 @@ export const Profile = () => {
       <Typography.Text>{dataAbout.summary}</Typography.Text>
 
       {/* Profile Interests */}
-      <div className="flex flex-col gap-4 sm:flex-row">
-        {dataAbout.interests.map(item => (
-          <div key={item.label}>
-            <Typography.Text variant="xs/medium">{item.label}</Typography.Text>
+      <div className="grid grid-rows-1 sm:grid-cols-2 gap-4 items-center">
+        <div className="order-last flex flex-col gap-2">
+          <Typography.Text variant="xs/medium" className="text-muted-foreground">
+            Resume
+          </Typography.Text>
+          <Button size="sm">
+            <FileTextIcon />
+            View CV
+          </Button>
+          <Button size="sm" variant="outline">
+            <Briefcase />
+            View Portoflio
+          </Button>
+        </div>
 
-            <div className="mt-1.5 flex sm:items-center gap-2">
-              {item.items.map((fragment, index) => (
-                <div key={index} className="bg-zinc-900 p-1.5 rounded" title={fragment.label}>
-                  <fragment.icon size={16} />
-                </div>
-              ))}
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-8">
+          {dataAbout.interests.map(item => (
+            <div key={item.label}>
+              <Typography.Text variant="xs/medium">{item.label}</Typography.Text>
+              <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                {item.items.map((fragment, index) => (
+                  <div key={index} className="bg-zinc-900 p-1.5 rounded" title={fragment.label}>
+                    <fragment.icon size={16} />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
-}
+};

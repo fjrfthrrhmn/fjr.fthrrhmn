@@ -18,9 +18,7 @@ export const InteractiveProfile = () => {
         <img
           src="https://i.pinimg.com/1200x/88/8b/a9/888ba992b024f21cc4effe0645db95d6.jpg"
           alt="profile"
-          width={150}
-          height={150}
-          className="rounded-3xl"
+          className="rounded-3xl w-max h-24"
         />
 
         <div className="hidden group-hover:block absolute top-0 left-0 w-full h-full duration-300 ease-in-out bg-black/50 transition-all">
